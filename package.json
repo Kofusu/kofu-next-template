@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node .next/standalone/server.js",
+    "build:start": "next build; node .next/standalone/server.js",
     "lint": "next lint",
     "lint:fix": "next lint --fix .",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,yml,yaml}\"",
+    "format:lint:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,yml,yaml}\"; next lint --fix .",
     "prepare": "husky"
   },
   "lint-staged": {
