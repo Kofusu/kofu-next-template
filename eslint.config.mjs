@@ -29,6 +29,8 @@ const eslintConfig = [
       'react/jsx-props-no-spreading': 'off',
       'react/prop-types': 'off',
       'no-console': 'error',
+      'react/jsx-one-expression-per-line': 'off',
+      'implicit-arrow-linebreak': 'off',
       'no-param-reassign': [
         'error',
         {
