@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import type { NextPage } from 'next';
-import { AntdRegistry } from '@ant-design/nextjs-registry';
 import '@/assets/styles/global.css';
 import { inter } from '@/fonts';
 import { cn } from '@/utils';
@@ -14,9 +13,7 @@ const RootLayout: NextPage<TRootLayout> = ({ children }) => (
   <html lang="en">
     <body className={cn('antialiased', inter.variable)}>
       <ReactQueryProvider>
-        <StoreProvider>
-          <AntdRegistry>{children}</AntdRegistry>
-        </StoreProvider>
+        <StoreProvider>{children}</StoreProvider>
       </ReactQueryProvider>
     </body>
   </html>
